@@ -7,6 +7,12 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 
 public class FlickrFetchr {
+	public static final String TAG = "FlickrFetchr";
+	private static final String ENDPOINT = "http://api.flickr.com/services/rest/";
+	private static final String API_KEY = "yourApiKeyHere";
+	private static final String METHOD_GET_RECENT = "flickr.photos.getRecent";
+	private static final String PARAM_EXTRAS = "extras";
+	private static final String EXTRA_SMALL_URL = "url_s";
 	
 	public byte[] getUrlBytes(String urlSpec) throws IOException{
 		URL url = new URL(urlSpec);
